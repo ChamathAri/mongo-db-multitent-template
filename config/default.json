@@ -1,0 +1,38 @@
+{
+  "server": {
+    "port": 4000,
+    "app": {
+      "name": "tenent-server"
+    }
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "domain": {
+    "riskManager":"http://www.localhost",
+    "SYSTEM_DOMAINS" : ["risk_manager", "www", "http", "https", "tcp", "admin", "app", "apps"],
+    "BLACK_LIST_DOMAINS" : []
+  },
+  "database": {
+    "url": "mongodb://localhost:27017/tenents_ts",
+    "urlbase": "mongodb://localhost:27017/",
+    "db_sufix": "_rmdb"
+  },
+  "auth": {
+    "tokenExpiresIn": "7d",
+    "saltWorkFactor" : 10,
+    "secret": "db97a3ed33ed5ea0430dbd02d400ede69e7ff5656d25811dcc720382c2997423"
+  },
+  "user":{
+    "route":{
+      "base": "/api/user",
+      "registerUser": "/register-user"
+    }
+  },
+  "tenent":{
+    "route":{
+      "base": "/api/tenent",
+      "t": "/"
+    }
+  }
+}
